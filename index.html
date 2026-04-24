@@ -1,259 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movela - Your Ride, Your Rules in Albania & Kosova</title>
-    <meta name="description"
-        content="Movela: The premium ride-sharing and ride-ordering application tailored for Albania and Kosova. High-quality rides, fair prices, and shared journeys.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <meta name="verify-paysera" content="5a23645921726e56a0445033d6a96db5" />
+    <meta
+      name="description"
+      content="Movela: The premium ride-sharing and ride-ordering application tailored for Albania and Kosova. High-quality rides, fair prices, and shared journeys."
+    />
+    <script type="text/javascript" charset="utf-8">
+      (function () {
+        const script = document.createElement("script");
+        const dateToday = new Date();
+        const todayFullDate =
+          dateToday.getDate() +
+          "-" +
+          (dateToday.getMonth() + 1) +
+          "-" +
+          dateToday.getFullYear();
 
-<body>
+        script.src =
+          "https://bank.paysera.com/js/compiled/quality-sign.js?v=" +
+          todayFullDate;
+        script.setAttribute("data-paysera-project-id", 256715);
+        script.setAttribute("data-lang", "en");
+        script.async = true;
+
+        document.head.appendChild(script);
+      })();
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
     <header id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Movela<span class="dot">.</span></a>
-            <nav class="nav-links">
-                <a href="#ride" data-i18n="nav_ride">Ride</a>
-                <a href="#drive" data-i18n="nav_drive">Drive</a>
-                <a href="#safety" data-i18n="nav_safety">Safety</a>
-                <a href="#cities" data-i18n="nav_cities">Cities</a>
-            </nav>
-            <div class="nav-actions">
-                <div class="lang-selector">
-                    <select class="lang-select" id="langSwitcher">
-                        <option value="en" selected>EN</option>
-                        <option value="al">AL</option>
-                        <option value="fr">FR</option>
-                    </select>
-                </div>
-                <a href="#download" class="btn btn-primary" data-i18n="nav_download">Download App</a>
-            </div>
+      <div class="nav-container">
+        <a href="#" class="logo">Movela<span class="dot">.</span></a>
+        <nav class="nav-links">
+          <a href="#ride" data-i18n="nav_ride">Ride</a>
+          <a href="#drive" data-i18n="nav_drive">Drive</a>
+          <a href="#safety" data-i18n="nav_safety">Safety</a>
+          <a href="#cities" data-i18n="nav_cities">Cities</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-selector">
+            <select class="lang-select" id="langSwitcher">
+              <option value="en" selected>EN</option>
+              <option value="al">AL</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+          <a href="#download" class="btn btn-primary" data-i18n="nav_download"
+            >Download App</a
+          >
         </div>
+      </div>
     </header>
 
     <main>
-        <section class="hero" id="home">
-            <div class="hero-bg-overlay"></div>
-            <div class="hero-container">
-                <div class="hero-content">
-                    <span class="badge" data-i18n="hero_badge">Now in Albania & Kosova</span>
-                    <h1 data-i18n="hero_title">Your Ride,<br>Your Rules.</h1>
-                    <p data-i18n="hero_subtitle">Order a quick ride in the city or share your journey across borders.
-                        Discover the premium mobility app built for our region.</p>
+      <section class="hero" id="home">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container">
+          <div class="hero-content">
+            <span class="badge" data-i18n="hero_badge"
+              >Now in Albania & Kosova</span
+            >
+            <h1 data-i18n="hero_title">Your Ride,<br />Your Rules.</h1>
+            <p data-i18n="hero_subtitle">
+              Order a quick ride in the city or share your journey across
+              borders. Discover the premium mobility app built for our region.
+            </p>
+          </div>
+          <div class="hero-mockup">
+            <img src="assets/app_mockup.png" alt="Movela App Mockup" />
+          </div>
+        </div>
+      </section>
 
-                </div>
-                <div class="hero-mockup">
-                    <img src="assets/app_mockup.png" alt="Movela App Mockup">
-                </div>
-            </div>
-        </section>
+      <section class="services" id="ride">
+        <div class="section-header">
+          <h2 data-i18n="services_title">Go anywhere with Movela</h2>
+          <p data-i18n="services_subtitle">
+            Multiple options to get you where you need to be.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <img
+              src="assets/city_rides.png"
+              alt="City Rides"
+              class="service-image"
+            />
+            <h3 data-i18n="city_rides_title">City Rides</h3>
+            <p data-i18n="city_rides_desc">
+              Request a ride in your city and get picked up by a top-rated
+              driver within minutes. Perfect for daily commutes or nights out.
+            </p>
+            <a href="#ride" class="service-link"
+              ><span data-i18n="btn_learn_more">Learn more</span> &rarr;</a
+            >
+          </div>
+          <div class="service-card">
+            <img
+              src="assets/carpooling.png"
+              alt="Carpooling"
+              class="service-image"
+            />
+            <h3 data-i18n="carpool_title">Carpooling</h3>
+            <p data-i18n="carpool_desc">
+              Traveling between cities? Share a ride with others heading your
+              way. Split the costs and make new friends on the road.
+            </p>
+            <a href="#carpool" class="service-link"
+              ><span data-i18n="btn_explore">Explore routes</span> &rarr;</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <section class="services" id="ride">
-            <div class="section-header">
-                <h2 data-i18n="services_title">Go anywhere with Movela</h2>
-                <p data-i18n="services_subtitle">Multiple options to get you where you need to be.</p>
+      <section class="cities-section" id="cities">
+        <div class="section-header">
+          <h2 data-i18n="cities_title">Top Cities</h2>
+          <p data-i18n="cities_subtitle">
+            Discover Movela in your favorite destinations across Albania.
+          </p>
+        </div>
+        <div class="cities-grid">
+          <div class="city-card">
+            <div class="carousel-container" data-city="tirana">
+              <div class="carousel-track"></div>
+              <button class="carousel-nav prev" aria-label="Previous image">
+                &#10094;
+              </button>
+              <button class="carousel-nav next" aria-label="Next image">
+                &#10095;
+              </button>
+              <div class="carousel-indicators"></div>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="assets/city_rides.png" alt="City Rides" class="service-image">
-                    <h3 data-i18n="city_rides_title">City Rides</h3>
-                    <p data-i18n="city_rides_desc">Request a ride in your city and get picked up by a top-rated driver
-                        within minutes. Perfect for daily commutes or nights out.</p>
-                    <a href="#ride" class="service-link"><span data-i18n="btn_learn_more">Learn more</span> &rarr;</a>
-                </div>
-                <div class="service-card">
-                    <img src="assets/carpooling.png" alt="Carpooling" class="service-image">
-                    <h3 data-i18n="carpool_title">Carpooling</h3>
-                    <p data-i18n="carpool_desc">Traveling between cities? Share a ride with others heading your way.
-                        Split the costs and make new friends on the road.</p>
-                    <a href="#carpool" class="service-link"><span data-i18n="btn_explore">Explore routes</span>
-                        &rarr;</a>
-                </div>
+            <h3 data-i18n="city_tirana">Tirana</h3>
+          </div>
+          <div class="city-card">
+            <div class="carousel-container" data-city="durres">
+              <div class="carousel-track"></div>
+              <button class="carousel-nav prev" aria-label="Previous image">
+                &#10094;
+              </button>
+              <button class="carousel-nav next" aria-label="Next image">
+                &#10095;
+              </button>
+              <div class="carousel-indicators"></div>
             </div>
-        </section>
+            <h3 data-i18n="city_durres">Durrës</h3>
+          </div>
+          <div class="city-card">
+            <div class="carousel-container" data-city="vlore">
+              <div class="carousel-track"></div>
+              <button class="carousel-nav prev" aria-label="Previous image">
+                &#10094;
+              </button>
+              <button class="carousel-nav next" aria-label="Next image">
+                &#10095;
+              </button>
+              <div class="carousel-indicators"></div>
+            </div>
+            <h3 data-i18n="city_vlore">Vlorë</h3>
+          </div>
+          <div class="city-card">
+            <div class="carousel-container" data-city="shkoder">
+              <div class="carousel-track"></div>
+              <button class="carousel-nav prev" aria-label="Previous image">
+                &#10094;
+              </button>
+              <button class="carousel-nav next" aria-label="Next image">
+                &#10095;
+              </button>
+              <div class="carousel-indicators"></div>
+            </div>
+            <h3 data-i18n="city_shkoder">Shkodër</h3>
+          </div>
+        </div>
+      </section>
 
-        <section class="cities-section" id="cities">
-            <div class="section-header">
-                <h2 data-i18n="cities_title">Top Cities</h2>
-                <p data-i18n="cities_subtitle">Discover Movela in your favorite destinations across Albania.</p>
+      <section class="faq-section" id="faq">
+        <div class="section-header">
+          <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+          <p data-i18n="faq_subtitle">
+            Everything you need to know about riding with Movela.
+          </p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq_q1">How do I request a ride?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a1">
+                Simply download the Movela app, create an account, enter your
+                destination, and choose your preferred ride option. A driver
+                will be matched with you shortly.
+              </p>
             </div>
-            <div class="cities-grid">
-                <div class="city-card">
-                    <div class="carousel-container" data-city="tirana">
-                        <div class="carousel-track"></div>
-                        <button class="carousel-nav prev" aria-label="Previous image">&#10094;</button>
-                        <button class="carousel-nav next" aria-label="Next image">&#10095;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                    <h3 data-i18n="city_tirana">Tirana</h3>
-                </div>
-                <div class="city-card">
-                    <div class="carousel-container" data-city="durres">
-                        <div class="carousel-track"></div>
-                        <button class="carousel-nav prev" aria-label="Previous image">&#10094;</button>
-                        <button class="carousel-nav next" aria-label="Next image">&#10095;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                    <h3 data-i18n="city_durres">Durrës</h3>
-                </div>
-                <div class="city-card">
-                    <div class="carousel-container" data-city="vlore">
-                        <div class="carousel-track"></div>
-                        <button class="carousel-nav prev" aria-label="Previous image">&#10094;</button>
-                        <button class="carousel-nav next" aria-label="Next image">&#10095;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                    <h3 data-i18n="city_vlore">Vlorë</h3>
-                </div>
-                <div class="city-card">
-                    <div class="carousel-container" data-city="shkoder">
-                        <div class="carousel-track"></div>
-                        <button class="carousel-nav prev" aria-label="Previous image">&#10094;</button>
-                        <button class="carousel-nav next" aria-label="Next image">&#10095;</button>
-                        <div class="carousel-indicators"></div>
-                    </div>
-                    <h3 data-i18n="city_shkoder">Shkodër</h3>
-                </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq_q2">Are the prices fixed?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a2">
+                Yes, Movela provides an upfront fixed price before you confirm
+                your ride, so you always know exactly what you'll pay without
+                any surprises.
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq_q3"
+                >How does intercity carpooling work?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a3">
+                You can search for drivers traveling between major cities in
+                Albania and Kosova. Book a seat in their car to share the
+                journey and split the costs.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq_q4">Is Movela safe?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq_a4">
+                Safety is our top priority. All drivers undergo background
+                checks and vehicle inspections. Our app also features ride
+                sharing tracking and a 24/7 emergency button.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="faq-section" id="faq">
-            <div class="section-header">
-                <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
-                <p data-i18n="faq_subtitle">Everything you need to know about riding with Movela.</p>
+      <section class="download-section" id="download">
+        <div class="section-header">
+          <h2 data-i18n="download_title">Ready to move?</h2>
+          <p data-i18n="download_subtitle">
+            Download the Movela app today and experience the future of mobility
+            in Albania and Kosova.
+          </p>
+        </div>
+        <div class="app-buttons">
+          <a href="#" class="app-btn">
+            <!-- Apple Logo SVG -->
+            <svg
+              height="30"
+              viewBox="0 0 384 512"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#fff"
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              />
+            </svg>
+            <div class="app-btn-text">
+              <span>Download on the</span>
+              <strong>App Store</strong>
             </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="faq_q1">How do I request a ride?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a1">Simply download the Movela app, create an account, enter your destination,
-                            and choose your preferred ride option. A driver will be matched with you shortly.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="faq_q2">Are the prices fixed?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a2">Yes, Movela provides an upfront fixed price before you confirm your ride,
-                            so you always know exactly what you'll pay without any surprises.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="faq_q3">How does intercity carpooling work?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a3">You can search for drivers traveling between major cities in Albania and
-                            Kosova. Book a seat in their car to share the journey and split the costs.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span data-i18n="faq_q4">Is Movela safe?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p data-i18n="faq_a4">Safety is our top priority. All drivers undergo background checks and
-                            vehicle inspections. Our app also features ride sharing tracking and a 24/7 emergency
-                            button.</p>
-                    </div>
-                </div>
+          </a>
+          <a href="#" class="app-btn">
+            <!-- Android Logo SVG -->
+            <svg
+              height="30"
+              viewBox="0 0 512 512"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#007bff"
+                d="M325.3 234.3c-13.6 0-24.7 11.1-24.7 24.7s11.1 24.7 24.7 24.7 24.7-11.1 24.7-24.7-11.1-24.7-24.7-24.7zM186.7 234.3c-13.6 0-24.7 11.1-24.7 24.7s11.1 24.7 24.7 24.7 24.7-11.1 24.7-24.7-11.1-24.7-24.7-24.7z"
+              />
+              <path
+                fill="#007bff"
+                d="M386.9 146.4l33.6-58.2c2.2-3.8 1-8.5-2.7-10.7-3.8-2.2-8.5-1-10.7 2.7l-34.1 59.1c-34.5-15.6-72.9-24.2-113.8-24.2s-79.3 8.6-113.8 24.2L111.4 80.2c-2.2-3.8-7-5-10.7-2.7-3.8 2.2-5 7-2.7 10.7l33.6 58.2c-56 31.6-96.5 86.6-108.5 152.4h465.9c-12-65.8-52.6-120.8-102.1-152.4z"
+              />
+            </svg>
+            <div class="app-btn-text">
+              <span>GET IT ON</span>
+              <strong>Google Play</strong>
             </div>
-        </section>
-
-        <section class="download-section" id="download">
-            <div class="section-header">
-                <h2 data-i18n="download_title">Ready to move?</h2>
-                <p data-i18n="download_subtitle">Download the Movela app today and experience the future of mobility in
-                    Albania and Kosova.</p>
-            </div>
-            <div class="app-buttons">
-                <a href="#" class="app-btn">
-                    <!-- Apple Logo SVG -->
-                    <svg height="30" viewBox="0 0 384 512" width="30" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#fff"
-                            d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
-                    </svg>
-                    <div class="app-btn-text">
-                        <span>Download on the</span>
-                        <strong>App Store</strong>
-                    </div>
-                </a>
-                <a href="#" class="app-btn">
-                    <!-- Android Logo SVG -->
-                    <svg height="30" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#007bff"
-                            d="M325.3 234.3c-13.6 0-24.7 11.1-24.7 24.7s11.1 24.7 24.7 24.7 24.7-11.1 24.7-24.7-11.1-24.7-24.7-24.7zM186.7 234.3c-13.6 0-24.7 11.1-24.7 24.7s11.1 24.7 24.7 24.7 24.7-11.1 24.7-24.7-11.1-24.7-24.7-24.7z" />
-                        <path fill="#007bff"
-                            d="M386.9 146.4l33.6-58.2c2.2-3.8 1-8.5-2.7-10.7-3.8-2.2-8.5-1-10.7 2.7l-34.1 59.1c-34.5-15.6-72.9-24.2-113.8-24.2s-79.3 8.6-113.8 24.2L111.4 80.2c-2.2-3.8-7-5-10.7-2.7-3.8 2.2-5 7-2.7 10.7l33.6 58.2c-56 31.6-96.5 86.6-108.5 152.4h465.9c-12-65.8-52.6-120.8-102.1-152.4z" />
-                    </svg>
-                    <div class="app-btn-text">
-                        <span>GET IT ON</span>
-                        <strong>Google Play</strong>
-                    </div>
-                </a>
-            </div>
-        </section>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="#" class="logo">Movela<span class="dot">.</span></a>
-                <p>The premier mobility platform connecting Albania and Kosova safely, securely, and affordably.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Safety</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Products</h4>
-                <ul>
-                    <li><a href="#">Ride</a></li>
-                    <li><a href="#">Drive</a></li>
-                    <li><a href="#">Cities</a></li>
-                    <li><a href="#">Business</a></li>
-                </ul>
-            </div>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">Movela<span class="dot">.</span></a>
+          <p>
+            The premier mobility platform connecting Albania and Kosova safely,
+            securely, and affordably.
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Movela. All rights reserved.</p>
-            <div class="socials">
-                <span>IG</span> &nbsp;
-                <span>FB</span> &nbsp;
-                <span>TW</span>
-            </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Safety</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Ride</a></li>
+            <li><a href="#">Drive</a></li>
+            <li><a href="#">Cities</a></li>
+            <li><a href="#">Business</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Movela. All rights reserved.</p>
+        <div class="socials">
+          <span>IG</span> &nbsp; <span>FB</span> &nbsp;
+          <span>TW</span>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
