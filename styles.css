@@ -765,3 +765,123 @@ footer {
         max-width: 100%;
     }
 }
+
+/* Privacy Policy Layout */
+.policy-page {
+    padding: 120px 2rem 60px;
+    background-color: var(--surface-color);
+}
+
+.policy-header {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.policy-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.policy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.policy-sidebar {
+    flex: 0 0 250px;
+    position: sticky;
+    top: 120px;
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.policy-sidebar h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.policy-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policy-sidebar li {
+    margin-bottom: 0.8rem;
+}
+
+.policy-sidebar a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.policy-sidebar a:hover,
+.policy-sidebar a.active {
+    color: var(--accent-color);
+}
+
+.policy-content {
+    flex: 1;
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.policy-content section {
+    margin-bottom: 4rem;
+}
+
+.policy-content section:last-child {
+    margin-bottom: 0;
+}
+
+.policy-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    scroll-margin-top: 120px;
+}
+
+.policy-content h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content p, 
+.policy-content ul {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.policy-content ul {
+    padding-left: 1.5rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .policy-container {
+        flex-direction: column;
+    }
+    .policy-sidebar {
+        position: static;
+        width: 100%;
+        flex: none;
+        margin-bottom: 2rem;
+    }
+}

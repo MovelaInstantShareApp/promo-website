@@ -25,21 +25,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // City Carousel initialization with 10 HD images per city
-    document.querySelectorAll('.carousel-container').forEach(container => {
+    // Unsplash API Access Key (Replace with your own key from unsplash.com/developers)
+    const UNSPLASH_ACCESS_KEY = 'UUSvA580Y4ruZVN8CewhcfsJRWwGjzXfuaenWwNv2Mw';
+
+    // City Carousel initialization with Unsplash API
+    document.querySelectorAll('.carousel-container').forEach(async container => {
         const city = container.dataset.city;
         const track = container.querySelector('.carousel-track');
         const indicatorsContainer = container.querySelector('.carousel-indicators');
 
-        // Generate 10 images dynamically based on the city
-        // We use picsum seeds for consistent high-quality 1200x800 images
+        let imageUrls = [];
+
+        // Attempt to fetch photos of the city from Unsplash API
+        try {
+            if (UNSPLASH_ACCESS_KEY && UNSPLASH_ACCESS_KEY !== 'YOUR_UNSPLASH_ACCESS_KEY') {
+                const response = await fetch(`https://api.unsplash.com/search/photos?query=${city} albania city&per_page=5&orientation=landscape&client_id=${UNSPLASH_ACCESS_KEY}`);
+                const data = await response.json();
+                if (data.results && data.results.length > 0) {
+                    imageUrls = data.results.map(img => img.urls.regular);
+                }
+            }
+        } catch (error) {
+            console.error(`Error fetching Unsplash images for ${city}:`, error);
+        }
+
+        // Fallback to picsum.photos if Unsplash API fails or no key is provided
+        if (imageUrls.length === 0) {
+            for (let i = 1; i <= 5; i++) {
+                imageUrls.push(`https://picsum.photos/seed/${city}-movela-${i}/1200/800`);
+            }
+        }
+
         let slidesHtml = '';
         let indicatorsHtml = '';
-        for (let i = 1; i <= 10; i++) {
-            const imgUrl = `https://picsum.photos/seed/${city}-movela-${i}/1200/800`;
+
+        imageUrls.forEach((imgUrl, i) => {
             slidesHtml += `<div class="carousel-slide" style="background-image: url('${imgUrl}');"></div>`;
-            indicatorsHtml += `<div class="indicator ${i === 1 ? 'active' : ''}" data-index="${i - 1}"></div>`;
-        }
+            indicatorsHtml += `<div class="indicator ${i === 0 ? 'active' : ''}" data-index="${i}"></div>`;
+        });
 
         track.innerHTML = slidesHtml;
         indicatorsContainer.innerHTML = indicatorsHtml;
@@ -47,16 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
         const slides = track.querySelectorAll('.carousel-slide');
         const indicators = indicatorsContainer.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
 
         function goToSlide(index) {
-            if (index < 0) index = 9;
-            if (index > 9) index = 0;
+            if (totalSlides === 0) return;
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
 
             currentIndex = index;
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
             indicators.forEach(ind => ind.classList.remove('active'));
-            indicators[currentIndex].classList.add('active');
+            if (indicators[currentIndex]) {
+                indicators[currentIndex].classList.add('active');
+            }
         }
 
         container.querySelector('.prev').addEventListener('click', () => goToSlide(currentIndex - 1));
