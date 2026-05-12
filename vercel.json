@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/payseraReturnSuccess",
+      "destination": "https://us-central1-movela-4c8ae.cloudfunctions.net/payseraReturnSuccess"
+    },
+    {
+      "source": "/payseraReturnCancel",
+      "destination": "https://us-central1-movela-4c8ae.cloudfunctions.net/payseraReturnCancel"
+    },
+    {
+      "source": "/payseraWebhook",
+      "destination": "https://us-central1-movela-4c8ae.cloudfunctions.net/payseraWebhook"
+    }
+  ]
+}
