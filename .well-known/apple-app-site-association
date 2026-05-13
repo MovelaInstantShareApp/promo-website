@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "JZ74H4SBS3.com.movela.app"
+        ],
+        "components": [
+          {
+            "/": "/invite",
+            "comment": "Open the Movela app for referral signup links"
+          },
+          {
+            "/": "/invite/*",
+            "comment": "Open the Movela app for any /invite/ subpath"
+          }
+        ]
+      }
+    ]
+  }
+}
