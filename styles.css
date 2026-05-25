@@ -340,55 +340,129 @@ a {
 
 
 /* ==========================================================================
-   Drive Segment Section (Individual vs Company)
+   Premium App Vibe - Drive Segment Section
    ========================================================================== */
 .segment-section {
-    padding: 6rem 0 8rem;
-    background-color: #000000; /* Rich solid dark section block */
+    padding: 8rem 0;
+    background: radial-gradient(circle at top, #0f111a 0%, #000000 100%); /* Deep immersive dark base */
     color: #ffffff;
-    scroll-margin-top: var(--nav-height); /* Keeps the fixed header from blocking view */
+    scroll-margin-top: var(--nav-height);
     width: 100%;
 }
 
+/* Header styling for "Become A driver" */
+.segment-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.segment-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.segment-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, #ffffff 0%, #a0aec0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.segment-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Container & Cards Grid */
 .segment-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 3rem;
     padding: 0 2rem;
 }
 
 .segment-card {
-    background: #0b0d13; /* Elegant deep card container shading */
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    padding: 6rem 3rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 4.5rem 3rem;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+/* Custom background ambient glows for an App UI style */
+.card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.08) 0%, transparent 50%);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.segment-card.company-vibe .card-glow {
+    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
 }
 
 .segment-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-    box-shadow: 0 12px 40px rgba(0, 123, 255, 0.25);
+    transform: translateY(-8px);
+    border-color: rgba(0, 212, 255, 0.4);
 }
 
-.segment-card h2 {
-    font-family: var(--font-main);
-    font-size: 2.8rem;
+.segment-card:hover .card-glow {
+    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.15) 0%, transparent 60%);
+}
+
+/* Card Content Details */
+.card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.segment-card h3 {
+    font-size: 2.2rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     letter-spacing: -0.5px;
 }
 
-.segment-card .btn-outline {
+.segment-card p {
+    color: #a0aec0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    max-width: 85%;
+}
+
+/* Sleek Capsule Buttons matching your Mockups */
+.btn-app-outline {
     display: inline-block;
     font-family: var(--font-main);
     font-weight: 600;
@@ -396,53 +470,36 @@ a {
     color: #ffffff;
     text-decoration: none;
     padding: 0.8rem 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50px;
-    background: transparent;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
 }
 
-.segment-card .btn-outline:hover {
-    background-color: #ffffff;
-    color: #000000;
-    border-color: #ffffff;
-    transform: translateY(-2px);
+.btn-app-outline:hover {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: scale(1.03);
 }
 
-/* Mobile Responsiveness matching your structural breakpoints */
+/* Responsive Viewports */
 @media (max-width: 992px) {
     .segment-container {
         grid-template-columns: 1fr;
-        max-width: 600px;
+        max-width: 550px;
+        gap: 2rem;
+    }
+    .segment-header h2 {
+        font-size: 2.5rem;
     }
     .segment-card {
-        padding: 4rem 2rem;
+        padding: 3.5rem 2rem;
     }
 }
-
-@media (max-width: 768px) {
-    .segment-card h2 {
-        font-size: 2.2rem;
-    }
-}
-
-
-/* Hero Section */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    padding-top: var(--nav-height);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background-image: url('assets/tirana_hero_bg.png');
-    background-size: cover;
-    background-position: center;
-}
-
-/* ... The rest of your hero CSS continues as normal down below ... */
-
 
 
 /* Hero Section */
