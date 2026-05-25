@@ -884,16 +884,17 @@ footer {
         flex: none;
         margin-bottom: 2rem;
     }
-}
+} /* This was the bracket closing your old mobile styles safely! */
+
 
 /* ==========================================================================
    Drive Segment Section (Individual vs Company)
    ========================================================================== */
 .segment-section {
     padding: 8rem 0;
-    background-color: #000000; /* Dark section to blend with your premium aesthetic */
+    background-color: #000000; 
     color: #ffffff;
-    scroll-margin-top: var(--nav-height); /* Built-in calculation to offset your fixed navbar */
+    scroll-margin-top: var(--nav-height); 
 }
 
 .segment-container {
@@ -907,7 +908,7 @@ footer {
 }
 
 .segment-card {
-    background: #0b0d13; /* Deep midnight-black variant card */
+    background: #0b0d13; 
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 5rem 3rem;
@@ -942,7 +943,7 @@ footer {
     text-decoration: none;
     padding: 0.8rem 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50px; /* Perfectly matches your .btn rounding */
+    border-radius: 50px;
     background: transparent;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -955,7 +956,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments adapting to your mobile breakpoint structure */
 @media (max-width: 992px) {
     .segment-container {
         grid-template-columns: 1fr;
