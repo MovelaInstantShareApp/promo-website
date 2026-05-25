@@ -339,6 +339,110 @@ a {
 }
 
 
+/* ... Your existing .btn-large styles are right up here ... */
+
+/* ==========================================================================
+   Drive Segment Section (Individual vs Company)
+   ========================================================================== */
+.segment-section {
+    padding: 8rem 0;
+    background-color: #000000; 
+    color: #ffffff;
+    scroll-margin-top: var(--nav-height); 
+}
+
+.segment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.segment-card {
+    background: #0b0d13; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 5rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.segment-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+}
+
+.segment-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.segment-card .btn-outline {
+    display: inline-block;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.segment-card .btn-outline:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+    .segment-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    .segment-card {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .segment-card h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding-top: var(--nav-height);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('assets/tirana_hero_bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ... The rest of your hero CSS continues as normal down below ... */
+
+
 
 /* Hero Section */
 
