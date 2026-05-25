@@ -339,16 +339,15 @@ a {
 }
 
 
-/* ... Your existing .btn-large styles are right up here ... */
-
 /* ==========================================================================
    Drive Segment Section (Individual vs Company)
    ========================================================================== */
 .segment-section {
-    padding: 8rem 0;
-    background-color: #000000; 
+    padding: 6rem 0 8rem;
+    background-color: #000000; /* Rich solid dark section block */
     color: #ffffff;
-    scroll-margin-top: var(--nav-height); 
+    scroll-margin-top: var(--nav-height); /* Keeps the fixed header from blocking view */
+    width: 100%;
 }
 
 .segment-container {
@@ -357,15 +356,15 @@ a {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 0 2rem;
 }
 
 .segment-card {
-    background: #0b0d13; 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0b0d13; /* Elegant deep card container shading */
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
-    padding: 5rem 3rem;
+    padding: 6rem 3rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -377,11 +376,12 @@ a {
 .segment-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent-color);
-    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 123, 255, 0.25);
 }
 
 .segment-card h2 {
-    font-size: 2.5rem;
+    font-family: var(--font-main);
+    font-size: 2.8rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 2rem;
@@ -410,6 +410,7 @@ a {
     transform: translateY(-2px);
 }
 
+/* Mobile Responsiveness matching your structural breakpoints */
 @media (max-width: 992px) {
     .segment-container {
         grid-template-columns: 1fr;
@@ -422,7 +423,7 @@ a {
 
 @media (max-width: 768px) {
     .segment-card h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 
