@@ -885,3 +885,90 @@ footer {
         margin-bottom: 2rem;
     }
 }
+
+/* ==========================================================================
+   Drive Segment Section (Individual vs Company)
+   ========================================================================== */
+.segment-section {
+    padding: 8rem 0;
+    background-color: #000000; /* Dark section to blend with your premium aesthetic */
+    color: #ffffff;
+    scroll-margin-top: var(--nav-height); /* Built-in calculation to offset your fixed navbar */
+}
+
+.segment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.segment-card {
+    background: #0b0d13; /* Deep midnight-black variant card */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 5rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.segment-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+}
+
+.segment-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.segment-card .btn-outline {
+    display: inline-block;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px; /* Perfectly matches your .btn rounding */
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.segment-card .btn-outline:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments adapting to your mobile breakpoint structure */
+@media (max-width: 992px) {
+    .segment-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    .segment-card {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .segment-card h2 {
+        font-size: 2rem;
+    }
+}
