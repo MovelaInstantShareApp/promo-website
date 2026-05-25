@@ -1,25 +1,15 @@
 :root {
 
     --bg-color: #ffffff;
-
     --surface-color: #f7fafc;
-
     --surface-light: #edf2f7;
-
     --text-primary: #1a202c;
-
     --text-secondary: #4a5568;
-
     --accent-color: #007bff;
-
     --accent-gradient: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
-
     --accent-glow: rgba(0, 123, 255, 0.4);
-
     --nav-height: 80px;
-
     --font-main: 'Outfit', sans-serif;
-
     --border-radius: 12px;
 
 }
