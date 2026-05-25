@@ -339,336 +339,78 @@ a {
 }
 
 
-/* ==========================================================================
-
-   Premium App Vibe - Drive Segment Section (Fixed Alignment)
-
-   ========================================================================== */
-
-.segment-section {
-
-    padding: 8rem 0;
-
-    background: radial-gradient(circle at top, #0f111a 0%, #000000 100%);
-
-    color: #ffffff;
-
-    scroll-margin-top: var(--nav-height);
-
-    width: 100%;
-
-    font-family: 'Outfit', sans-serif;
-
-}
-
-
-
-/* Header centered and styled to match the hero vibe */
-
-.segment-header {
-
-    text-align: center;
-
-    max-width: 700px;
-
-    margin: 0 auto 4rem;
-
-    padding: 0 2rem;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-}
-
-
-
-.segment-badge {
-
-    display: inline-block;
-
-    padding: 0.4rem 1rem;
-
-    background: rgba(0, 212, 255, 0.1);
-
-    color: #00d4ff;
-
-    border: 1px solid rgba(0, 212, 255, 0.3);
-
-    border-radius: 50px;
-
-    font-size: 0.85rem;
-
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 1.5rem;
-
-}
-
-
-
-.segment-header h2 {
-
-    font-size: 3.5rem;
-
-    font-weight: 800;
-
-    letter-spacing: -1px;
-
-    margin-bottom: 1rem;
-
-    color: #ffffff;
-
-}
-
-
-
-.segment-header p {
-
-    color: #a0aec0;
-
-    font-size: 1.2rem;
-
-    line-height: 1.5;
-
-}
-
-
-
-/* Container Grid setup */
-
-.segment-container {
-
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 3rem;
-
-    padding: 0 2rem;
-
-}
-
-
-
-/* Card layout fixes */
-
-.segment-card {
-
-    position: relative;
-
-    background: rgba(255, 255, 255, 0.03);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 24px;
-
-    padding: 5rem 3rem;
-
-    overflow: hidden;
-
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-
-}
-
-
-
-.card-glow {
-
-    position: absolute;
-
-    top: -50%;
-
-    left: -50%;
-
-    width: 200%;
-
-    height: 200%;
-
-    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.05) 0%, transparent 50%);
-
-    pointer-events: none;
-
-    transition: background 0.3s ease;
-
-}
-
-
-
-.segment-card.company-vibe .card-glow {
-
-    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
-
-}
-
-
-
-.segment-card:hover {
-
-    transform: translateY(-8px);
-
-    border-color: #00d4ff;
-
-    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
-
-}
-
-
-
-.segment-card:hover .card-glow {
-
-    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.12) 0%, transparent 60%);
-
-}
-
-
-
-/* Content inside cards centering fixes */
-
-.card-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-}
-
-
-
-.segment-card h3 {
-
-    font-size: 2.2rem;
-
-    font-weight: 700;
-
-    color: #ffffff;
-
-    margin-bottom: 1.2rem;
-
-    letter-spacing: -0.5px;
-
-}
-
-
-
-.segment-card p {
-
-    color: #cbd5e0;
-
-    font-size: 1.05rem;
-
-    line-height: 1.6;
-
-    margin-bottom: 3rem;
-
-    max-width: 90%;
-
-    min-height: 4.5rem; /* Keeps cards aligned evenly if text length varies */
-
-}
-
-
-
-/* Pill-shaped app button layout styling */
-
-.btn-app-outline {
-
-    display: inline-block;
-
-    font-weight: 600;
-
-    font-size: 0.95rem;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    padding: 0.9rem 3rem;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-
-    background: rgba(255, 255, 255, 0.05);
-
-    border-radius: 50px;
-
-    transition: all 0.3s ease;
-
-    cursor: pointer;
-
-}
-
-
-
-.btn-app-outline:hover {
-
-    background: #00d4ff;
-
-    color: #000000;
-
-    border-color: #00d4ff;
-
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
-
-    transform: translateY(-2px);
-
-}
-
-
-
-/* Mobile Responsiveness Viewports */
-
-@media (max-width: 992px) {
-
-    .segment-container {
-
-        grid-template-columns: 1fr;
-
-        max-width: 550px;
-
-        gap: 2.5rem;
-
-    }
-
-    .segment-header h2 {
-
-        font-size: 2.8rem;
-
-    }
-
-    .segment-card {
-
-        padding: 4rem 2rem;
-
-    }
-
-    .segment-card p {
-
-        min-height: auto;
-
-    }
-
-} 
-
+<section class="segment-section" id="drive">
+    <div class="segment-header">
+      <span class="segment-badge">Earn with Movela</span>
+      <h2>Become A driver</h2>
+      <p>Choose how you want to partner with us and start moving our region.</p>
+    </div>
+    
+    <div class="segment-container">
+      <div class="segment-card individual-vibe">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3>Individual</h3>
+          <p>Drive your own vehicle, set your own schedule, and earn on your own terms.</p>
+          <button class="btn-app-outline" onclick="toggleOnboarding()">Read more</button>
+        </div>
+      </div>
+
+      <div class="segment-card company-vibe">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <h3>Company</h3>
+          <p>Partner your fleet with Movela to scale operations and unlock corporate mobility routes.</p>
+          <a href="mailto:info@gomovela.com" class="btn-app-outline" data-i18n="segment_company_btn">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="onboarding-wrapper" id="onboardingSteps">
+      <div class="onboarding-inner">
+        <div class="onboarding-header">
+          <span class="mini-badge">Driver Guide</span>
+          <h3>Individual Driver Onboarding</h3>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-box">
+            <div class="step-num">01</div>
+            <h4>Introduction</h4>
+            <p>Download our app easily from the App Store for iOS or Google Play Store for Android. Just search for our app, tap download, and start your seamless journey with us.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-num">02</div>
+            <h4>Registration Process</h4>
+            <p>Signing up is quick and easy. Just open the app, choose your preferred login method—phone number, Google, or Apple ID—and follow the prompts to register securely.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-num">03</div>
+            <h4>Document Verification</h4>
+            <p>Upload required documents directly from your device. Navigate to the upload section, select your documents, and our system will swiftly process and approve them.</p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-num">04</div>
+            <h4>Vehicle Registration</h4>
+            <p>Easily manage your vehicles in our app. Add detailed information like license plate, brand, year, and model. Our user-friendly interface makes it effortless. Manage multiple vehicles conveniently in one place.</p>
+          </div>
+
+          <div class="step-box wide-step">
+            <div class="step-num">05</div>
+            <h4>Benefits of Driving with Movela</h4>
+            <div class="benefits-flex">
+              <span>⚡ Choose your own schedule for convenience.</span>
+              <span>💎 Transparent pricing for passenger trust.</span>
+              <span>🚀 Boost earnings with consistent ride requests.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -2095,233 +1837,3 @@ footer {
     }
 
 } 
-/* ==========================================================================
-   MOVEMEL A DRIVE SECTION & DRIVER GUIDE FIXED LAYOUT
-   ========================================================================== */
-
-/* Dark section wrapper to protect text contrast */
-.segment-section {
-    padding: 6rem 0;
-    background: #000000 !important; 
-    color: #ffffff !important;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-    clear: both;
-}
-
-/* Centered Header Layout */
-.segment-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    padding: 0 20px;
-}
-
-.segment-badge {
-    display: inline-block;
-    padding: 6px 16px;
-    background: rgba(0, 212, 255, 0.1);
-    color: #00d4ff !important;
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-}
-
-.segment-header h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #ffffff !important;
-    margin: 0 0 0.5rem 0;
-}
-
-.segment-header p {
-    color: #a0aec0 !important;
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-/* Split Column Grid */
-.segment-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Card Foundations */
-.segment-card {
-    background: #0b0c10 !important;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 3.5rem 2rem;
-    position: relative;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.segment-card:hover {
-    transform: translateY(-5px);
-    border-color: #00d4ff;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.segment-card h3 {
-    font-size: 1.8rem;
-    color: #ffffff !important;
-    margin: 0 0 1rem 0;
-}
-
-.segment-card p {
-    color: #cbd5e0 !important;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 0 2.5rem 0;
-    max-width: 90%;
-}
-
-/* Action Utility Pill Buttons */
-.btn-app-outline {
-    display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #ffffff !important;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0.75rem 2.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-app-outline:hover {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border-color: #ffffff;
-}
-
-/* Accordion Wrapper Utilities */
-.onboarding-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-}
-
-.onboarding-wrapper.active {
-    max-height: 2000px; 
-}
-
-.onboarding-inner {
-    max-width: 1100px;
-    margin: 3rem auto 0;
-    padding: 3rem 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.onboarding-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.mini-badge {
-    color: #00d4ff !important;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.onboarding-header h3 {
-    font-size: 1.8rem;
-    color: #ffffff !important;
-    margin: 0.25rem 0 0 0;
-}
-
-/* Guide Grid Layout */
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-
-.step-box {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 2rem;
-    position: relative;
-}
-
-.step-num {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: rgba(0, 212, 255, 0.1);
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-}
-
-.step-box h4 {
-    font-size: 1.15rem;
-    color: #ffffff !important;
-    margin: 0 0 0.75rem 0;
-}
-
-.step-box p {
-    color: #a0aec0 !important;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.wide-step {
-    grid-column: span 2;
-}
-
-.benefits-flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.benefits-flex span {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    color: #ffffff !important;
-    flex: 1;
-    text-align: center;
-}
-
-/* Responsive Overrides */
-@media (max-width: 768px) {
-    .segment-container, .steps-grid {
-        grid-template-columns: 1fr;
-    }
-    .wide-step {
-        grid-column: span 1;
-    }
-    .benefits-flex {
-        flex-direction: column;
-    }
-    .segment-header h2 {
-        font-size: 2rem;
-    }
-}
