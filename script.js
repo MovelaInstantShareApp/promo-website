@@ -246,5 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Function to show/hide Movela driver onboarding steps
+function toggleOnboarding() {
+    const stepsSection = document.getElementById('onboardingSteps');
+    if (stepsSection) {
+        stepsSection.classList.toggle('active');
+    }
+}
+
 
 
