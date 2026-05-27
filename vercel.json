@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/payseraReturnSuccess",
-      "destination": "https://us-central1-movela-4c8ae.cloudfunctions.net/payseraReturnSuccess"
+      "destination": "https://gomovela.com/payseraReturnSuccess"
     },
     {
       "source": "/payseraReturnCancel",
-      "destination": "https://us-central1-movela-4c8ae.cloudfunctions.net/payseraReturnCancel"
+      "destination": "https://gomovela.com/payseraReturnCancel"
     },
     {
       "source": "/payseraWebhook",
-      "destination": "https://us-central1-movela-4c8ae.cloudfunctions.net/payseraWebhook"
+      "destination": "https://gomovela.com/payseraWebhook"
     }
   ]
 }
